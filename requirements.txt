@@ -1,4 +1,4 @@
-#This is only ane example
+#This is only an example
 gitignore_parser==0.1.12
 jsonargparse[signatures]==4.38
 matplotlib==3.10.1
