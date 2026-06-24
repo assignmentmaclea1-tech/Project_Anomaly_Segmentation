@@ -47,7 +47,7 @@ def main():
         nargs="+",
         help="A list of space separated input images; or a single glob pattern such as 'directory/*.jpg'",
     )
-    parser.add_argument('--loadDir',default="../trained_models/")
+    parser.add_argument('--loadDir',default="../trained_models/") #SERVE DAVVERO QUESTO OPPURE NO? 
     parser.add_argument('--loadWeights', default="erfnet_pretrained.pth")
     parser.add_argument('--loadModel', default="erfnet.py")
     parser.add_argument('--subset', default="val")
