@@ -1,9 +1,9 @@
 # Project_Anomaly_Segmentation
 Add erfnet_pretrained.pth to checkpoint. Add everything useful that was used on Colab
 
-# Anomaly Segmentation Eval
+# Anomaly Segmentation Eval (TAKEN FROM README.MD OF TA)
 
-In this folder you can find some functions to evaluate your model's output. It is designed to load the ERFNet checkpoint so you need to change it when evaluating the EoMT model. The main function to look for is evalAnomaly.py that produces the Anomaly Segmentation results. Other functions could be useful for extensions.
+In this folder you can find some functions to evaluate your model's output. It is designed to load the ERFNet checkpoint so you need to change it when evaluating the EoMT model. The main function to look for is evalAnomaly.py that produces the Anomaly Segmentation results.
 
 ## Requirements:
 
@@ -18,22 +18,16 @@ It could work with the default runtime of Colab or other versions of the librari
 
 * Anomaly Inference Command:```python evalAnomaly.py --input '/home/amarinai/segmentation/unk-dataset/RoadAnomaly21/images/*.png```. Change the dataset path ```'/home/amarinai/segmentation/unk-dataset/RoadAnomaly21/images/*.png```accordingly.
 
-## Functions for evaluating/visualizing the network's output
-
-Currently there are 5 usable functions to evaluate stuff:
-- evalAnomaly
-- eval_cityscapes_color
-- eval_cityscapes_server
-- eval_iou
-- eval_forwardTime
-
-
 ## evalAnomaly.py
 
 This code can be used to produce anomaly segmentation results on various anomaly metrics on the validation datasets you can download [here](https://drive.google.com/file/d/1zcayoIIJztxKuHOIjmSjGoQBDy4RdETr/view?usp=drive_link)
 
 **Examples:**
 ```
-python evalAnomaly.py --input '/home/amarinai/ViT-Adapter/segmentation/unk-dataset/RoadAnomaly21/images/*.png'
+python evalAnomaly.py --input "/content/drive/MyDrive/Anomaly_Validation_Datasets/Validation_Dataset/RoadAnomaly21/images/*.png"
+python evalAnomaly.py --input "/content/drive/MyDrive/Anomaly_Validation_Datasets/Validation_Dataset/RoadObsticle21/images/*.webp" 
+python evalAnomaly.py --input "/content/drive/MyDrive/Anomaly_Validation_Datasets/Validation_Dataset/FS_LostFound_full/images/*.png"
+python evalAnomaly.py --input "/content/drive/MyDrive/Anomaly_Validation_Datasets/Validation_Dataset/fs_static/images/*.jpg"
+python evalAnomaly.py --input "/content/drive/MyDrive/Anomaly_Validation_Datasets/Validation_Dataset/RoadAnomaly/images/*.jpg" 
 ```
 
